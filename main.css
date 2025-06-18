@@ -1,0 +1,290 @@
+:root{
+    --percent:10%;
+}
+body{
+   background-color: #d5d5d5; 
+   font-family: system-ui;
+}
+
+.container{
+    background-color: aliceblue;
+    width: 1000px;
+    max-width: 100%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 10px 50px #5f5e5e;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    column-gap: 5%;
+    row-gap: 30px;
+}
+
+.avatar img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar{
+   display: flex;
+   justify-content: end; 
+}
+
+.name{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+}
+
+.name h1{
+   font-weight: 300; 
+   font-size: xxx-large;
+   margin: 0 0 5px;
+}
+
+.name .preferedposition{
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.name .contact span{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: small;
+    margin-right: 20px;
+}
+
+.name .contact li{
+    list-style: none;
+    padding: 5px 0;
+    transform: translate(-40px);
+    background-color: aliceblue;
+}
+
+.info ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: right;
+    line-height: 30px;
+}
+
+.intro{
+    padding-left: 30px;
+    border-left: 1px solid #000;
+    text-align: justify;
+}
+
+h2{
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.exp{
+    text-align: right;
+}
+
+.exp h4{
+     margin: 20px 0 10px;   
+}
+
+.skills{
+    margin-top: 50px;
+}
+
+.exp ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    line-height: 30px;
+}
+
+.project{
+    padding-left: 30px;
+    text-align: justify;
+    border-left: 1px solid #000;
+}
+
+.project .web{
+    color: green;
+    padding: 10px 0;
+}
+
+.project .location{
+    font-weight: 500;
+    padding:10px 0;
+}
+
+.project .item{
+    position: relative;
+}
+
+.project .item::before{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-color: #000;
+    content: ' ';
+    border-radius: 50%;
+    left: -37px;
+}
+
+.nav{
+    min-height: 42px;
+    background-color: red;
+    display: flex;
+    justify-content: flex-end;/*Cho noi dung sang ben phai*/
+    justify-content: space-between;
+}
+
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+}
+
+.nav-item{
+    color: #fff;
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+.form-container{
+    max-width: 720px;
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: #fff;
+}
+
+.form__row{
+    padding: 8px 0;
+    display: flex;
+}
+
+.form__label{
+    min-width: 90px;
+}
+
+.form__input{
+    flex:1;
+}
+
+/*Column layout*/
+.column-layout{
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+    flex: 1;
+}
+
+.column-item{
+    padding: 0 16px;
+    flex: 1;
+}
+
+.sidebar-one{
+
+}
+
+.sidebar-two{
+
+}
+
+.main-column{
+    flex: 2;
+}
+
+/*Feature layout*/
+
+.feature-layout{
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-item{
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+.feature-item:nth-child(1) {
+    background-color: pink;
+}
+
+.feature-item:nth-child(2){
+    background-color: aqua;
+}
+
+.wrap-layout{
+    background-color: #fff;
+    margin-top: 36px;
+    padding: 12px 0 32px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+    
+.wrap-layout__item{
+    width: 148px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 48px;
+    font-weight: 700;
+    background-color: orangered;
+}
+
+
+.center-layout{
+    background-color: aqua;
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    max-width: 640px;
+    height: 360px;
+    display: flex;
+}
+
+.center-layout__item{
+    font-size: 42px;
+    font-weight: 700;
+    margin: auto;
+}
+
+/*Chart-layout*/
+.chart-layout{
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.chart-layout-item{
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: orange;
+    animation: growth ease-in 0.3s;
+}
+
+@keyframes growth {
+    from{
+        opacity: 0;
+        height: calc(var(--percent) - 50%)
+    }to{
+        opacity: 1;
+        height: var(--percent);
+    }
+}
